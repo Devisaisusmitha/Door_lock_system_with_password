@@ -1,10 +1,9 @@
 # Automatic Door Lock System 🔐
 
-**Applies CMOS VLSI Digital Design concepts to Embedded Systems**
+**Applies CMOS VLSI Digital Design fundamental concepts to Embedded Systems**
 
 ## 🎯 VLSI Concepts Used
-This project implements digital design fundamentals from NPTEL's *CMOS Digital VLSI Design* course by IIT Roorkee:
-
+This project implements digital design fundamentals.
 ### **Demo**
 ![Working Demo](demo.gif)
 
@@ -27,8 +26,7 @@ This project implements digital design fundamentals from NPTEL's *CMOS Digital V
 2. **INPUT State**: Captures 4 digits sequentially into buffer registers
 3. **VERIFY State**: Compares input with stored password using combinational logic
 4. **UNLOCK State**: Triggers servo for 3s if match, then auto-locks → back to IDLE
-
-Same FSM design methodology used in VLSI chip design, applied at board level.
+This demonstartes understanding of digital design fudamentals, not VLSI chip design.
 
 ## 🎓 Course Alignment
 Built while pursuing **NPTEL CMOS Digital VLSI Design - Elite 69%** by Prof. Sudeb Dasgupta, IIT Roorkee. 
