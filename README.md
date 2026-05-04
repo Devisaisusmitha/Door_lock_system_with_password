@@ -40,5 +40,5 @@ I built this password-based door lock using Arduino UNO for my embedded systems 
 - Try connecting Bluetooth module.
 
 ### **Circuit Diagram**
-![Circuit Diagmra](circuit.png)
+![Circuit Diagram](circuit.png)
 
