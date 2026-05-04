@@ -1,44 +1,41 @@
 # Automatic Door Lock System 🔐
 
-I built this password-based door lock using Arduino UNO for my embedded systems practice. The whole circuit was designed and tested in Tinkercad Circuits.
+**Applies CMOS VLSI Digital Design concepts to Embedded Systems**
 
-### Demo
+## 🎯 VLSI Concepts Used
+This project implements digital design fundamentals from NPTEL's *CMOS Digital VLSI Design* course by IIT Roorkee:
+
+### **Demo**
 ![Working Demo](demo.gif)
 
-### How it works
-1. LCD shows "Enter Password" when system starts
-2. I enter password using 4x4 keypad 
-3. If I type `D2005` → servo motor turns and door unlocks
-4. If wrong password → LCD shows "Incorrect Password"
-5. After 2 seconds it resets to enter password again
+| VLSI Topic | Implementation in Project |
+| --- | --- |
+| **Finite State Machine (FSM)** | System states: `IDLE → INPUT → VERIFY → UNLOCK/LOCKED` |
+| **Sequential Logic** | 4-digit password stored & checked sequentially using registers |
+| **Clocking & Timing** | Servo PWM control + `delay()` for debouncing = clocked operations |
+| **Digital Comparators** | Password verification logic = 4-bit digital comparator |
+| **Memory Elements** | Password stored in EEPROM, similar to memory design concepts |
 
-### Components I used
+## 🔧 Hardware
 - Arduino UNO
-- 16x2 LCD Display
-- 4x4 Keypad  
-- SG90 Servo Motor
-- Few jumper wires
+- 4x4 Keypad 
+- Servo Motor SG90
+- 16x2 LCD
 
-### Software & Libraries
-- Arduino IDE
-- Tinkercad Circuits for simulation
-- Used `Servo.h`, `Keypad.h`, `LiquidCrystal.h` libraries
+## ⚡ How It Works
+1. **IDLE State**: Waits for keypad input
+2. **INPUT State**: Captures 4 digits sequentially into buffer registers
+3. **VERIFY State**: Compares input with stored password using combinational logic
+4. **UNLOCK State**: Triggers servo for 3s if match, then auto-locks → back to IDLE
 
-### Files
-- `door_lock_system_with_password1.ino` - My Arduino code
-- `demo.gif` - Video of working project
-- `circuit-diagram.png` - Circuit connections
+Same FSM design methodology used in VLSI chip design, applied at board level.
 
-### What I learned
-- Interfacing keypad and LCD with Arduino
-- Controlling servo motor based on conditions
-- Writing password authentication logic in Embedded C
+## 🎓 Course Alignment
+Built while pursuing **NPTEL CMOS Digital VLSI Design - Elite 69%** by Prof. Sudeb Dasgupta, IIT Roorkee. 
+Course topics applied: MOS transistors, CMOS logic, sequential design, clocking strategies.
 
-### Future improvements I want to add
-- Store password in EEPROM so it doesn't reset
-- Add buzzer for wrong password attempts
-- Try connecting Bluetooth module.
-
-### **Circuit Diagram**
+### **Circuit Diagram
 ![Circuit Diagram](circuit.png)
 
+## 🏷️ Tags
+`#VLSI` `#DigitalDesign` `#FSM` `#SequentialLogic` `#EmbeddedSystems` `#Arduino` `#NPTEL` `#IITRoorkee`
