@@ -105,7 +105,7 @@ void Open()
     }
     else{
       lcd.clear();
-      lcd.print("ERROR!!!");
+      lcd.print("INCORRECT!!!");
       door = false;
     }
     delay(2000);
