@@ -25,7 +25,7 @@ I built this password-based door lock using Arduino UNO for my embedded systems 
 - Used `Servo.h`, `Keypad.h`, `LiquidCrystal.h` libraries
 
 ### Files
-- `DoorLock.ino` - My Arduino code
+- `door_lock_system_with_password1.ino` - My Arduino code
 - `demo.gif` - Video of working project
 - `circuit-diagram.png` - Circuit connections
 
